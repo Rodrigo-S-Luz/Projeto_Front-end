@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de clientes</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="js/script.js"></script>
+</head>
+
+<body onload="recarregarClientes()">
+    <h1>Gerenciamento de clientes</h1>
+    <button onclick="adicionar()">Adicionar</button>
+
+    <!-- Botão de busca -->
+    <label for="buscar">Buscar Clientes:</label>
+    <input type="text" id="buscar" placeholder="Pesquisar">
+    <button onclick="buscarClientes()">buscar</button>
+
+
+    <table id="table-customers">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Telefone</th>
+                <th>Whatsapp</th> <!--primeiro campo adicional -->
+                <th>Sexo da Calopsita</th> <!-- segundo campo adicional -->
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <div id="container-modal">
+        <form id="form-modal" onsubmit="return false">
+            <div class="form-group">
+                <label>Nome</label>
+                <input type="text" name="nome" id="nome" />
+            </div>
+            <div class="form-group">
+                <label>CPF</label>
+                <input type="text" name="cpf" id="cpf" />
+            </div>
+            <div class="form-group">
+                <label>Telefone</label>
+                <input type="tel" name="telefone" id="telefone" />
+            </div>
+
+            <!-- Primeiro campo adicional -->
+            <div class="form-group">
+                <label>Whatsapp</label>
+                <input type="number" name="whatsapp" id="whatsapp" />
+            </div>
+            
+
+            <!-- Segundo campo adicional  -->
+            <div class="form-group">
+                <label>Sexo da Calopsita</label>
+                <input type="text" name="sexoCalopsita" id="sexoCalopsita" />
+            </div>
+            
+
+            <div class="form-buttons">
+                <button onclick="salvar()">Salvar</button>
+                <button onclick="cancelar()" id="botao-cancelar">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
